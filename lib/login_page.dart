@@ -4,8 +4,7 @@ import 'package:demeter_cd_sdi/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key, required this.title});
-  final String title;
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -163,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => const OtpVerificationPage(
-                              phoneNumber: 'asade@kontol.com',
+                              emailAddress: 'test@test.com',
                             ),
                           ),
                         );
@@ -181,10 +180,11 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text(
                         'Login',
                         style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xffE7E8E3)),
+                          fontSize: 16,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xffE7E8E3),
+                        ),
                       ),
                     ),
                   ],
@@ -200,9 +200,7 @@ class _LoginPageState extends State<LoginPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ForgotPassPage(
-                      title: '',
-                    ),
+                    builder: (context) => const ForgotPassPage(),
                   ),
                 );
               },
@@ -229,9 +227,7 @@ class _LoginPageState extends State<LoginPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SignupPage(
-                      title: '',
-                    ),
+                    builder: (context) => const SignupPage(),
                   ),
                 );
               },

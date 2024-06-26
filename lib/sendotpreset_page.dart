@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 class OtpVerificationResetPage extends StatefulWidget {
-  final String phoneNumber;
+  final String emailAddress;
 
-  const OtpVerificationResetPage({Key? key, required this.phoneNumber})
-      : super(key: key);
+  const OtpVerificationResetPage({super.key, required this.emailAddress});
 
   @override
-  _OtpVerificationResetPageState createState() =>
+  State<OtpVerificationResetPage> createState() =>
       _OtpVerificationResetPageState();
 }
 
@@ -18,45 +17,84 @@ class _OtpVerificationResetPageState extends State<OtpVerificationResetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffE7E8E3),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'We have sent a verification code to ${widget.phoneNumber}.',
-              textAlign: TextAlign.center,
+            const Image(
+              image: AssetImage('assets/images/OTP.png'),
+              height: 200,
+              width: 200,
             ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                4,
-                (index) => Container(
-                  width: 50,
-                  child: TextField(
-                    controller: otpControllers[index],
-                    keyboardType: TextInputType.number,
-                    maxLength: 1,
-                    textAlign: TextAlign.center,
-                    decoration: InputDecoration(
-                      counterText: '',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ),
+            const SizedBox(height: 70),
+            const Text(
+              'Reset Password',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF447055),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 14),
+            Text.rich(
+              TextSpan(
+                text: 'Link reset password telah dikirim ke ',
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontFamily: 'Inter',
+                  color: Color(0xFF447055),
+                ),
+                children: [
+                  TextSpan(
+                    text: widget.emailAddress,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontFamily: 'Inter',
+                      color: Color(0xFF447055),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const TextSpan(
+                    text: '.',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: 'Inter',
+                      color: Color(0xFF447055),
+                    ),
+                  ),
+                ],
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                // Validate the OTP here
-                final enteredOtp =
-                    otpControllers.map((controller) => controller.text).join();
-                print('Entered OTP: $enteredOtp');
-                // Implement your logic for verifying the OTP
+                // handle reset password
+                Navigator.of(context).popUntil((route) => route.isFirst);
               },
-              child: Text('Verify'),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: const Color(0xffE7E8E3),
+                backgroundColor: const Color(0xFF447055),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                minimumSize: const Size(350, 50),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+              ),
+              child: const Text(
+                'Ke halaman utama',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xffE7E8E3),
+                ),
+              ),
             ),
           ],
         ),

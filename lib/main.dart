@@ -68,7 +68,7 @@ class StartupPage extends StatelessWidget {
         ],
       ),
       backgroundColor: const Color(0xFF447055),
-      nextScreen: const StartMenu(title: 'Smart Drip Irrigation'),
+      nextScreen: const StartMenu(),
       duration: 3000,
       splashTransition: SplashTransition.fadeTransition,
       pageTransitionType: PageTransitionType.bottomToTop,

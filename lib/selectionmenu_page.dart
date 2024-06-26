@@ -4,8 +4,7 @@ import 'package:demeter_cd_sdi/signup_page.dart';
 import 'package:demeter_cd_sdi/forgotpass_page.dart';
 
 class StartMenu extends StatefulWidget {
-  const StartMenu({super.key, required this.title});
-  final String title;
+  const StartMenu({super.key});
 
   @override
   State<StartMenu> createState() => _StartMenuState();
@@ -69,9 +68,7 @@ class _StartMenuState extends State<StartMenu> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const LoginPage(
-                              title: 'Halaman Login',
-                            ),
+                            builder: (context) => const LoginPage(),
                           ),
                         );
                       },
@@ -100,9 +97,7 @@ class _StartMenuState extends State<StartMenu> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignupPage(
-                              title: '',
-                            ),
+                            builder: (context) => const SignupPage(),
                           ),
                         );
                       },
@@ -132,9 +127,7 @@ class _StartMenuState extends State<StartMenu> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ForgotPassPage(
-                                title: '',
-                              ),
+                              builder: (context) => const ForgotPassPage(),
                             ),
                           );
                         },

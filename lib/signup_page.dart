@@ -3,8 +3,7 @@ import 'package:demeter_cd_sdi/sendotp_page.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatefulWidget {
-  const SignupPage({super.key, required this.title});
-  final String title;
+  const SignupPage({super.key});
 
   @override
   State<SignupPage> createState() => _SignupPageState();
@@ -343,7 +342,7 @@ class _SignupPageState extends State<SignupPage> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => const OtpVerificationPage(
-                                phoneNumber: 'asade@kontol.com',
+                                emailAddress: 'test@test.com',
                               ),
                             ),
                           );
@@ -388,9 +387,7 @@ class _SignupPageState extends State<SignupPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const LoginPage(
-                          title: '',
-                        ),
+                        builder: (context) => const LoginPage(),
                       ),
                     );
                   },

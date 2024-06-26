@@ -2,8 +2,7 @@ import 'package:demeter_cd_sdi/sendotpreset_page.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassPage extends StatefulWidget {
-  const ForgotPassPage({super.key, required this.title});
-  final String title;
+  const ForgotPassPage({super.key});
 
   @override
   State<ForgotPassPage> createState() => _ForgotPassPageState();
@@ -86,15 +85,6 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
-                      'Masukkan Email',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
-                          color: Color(0xFF447055)),
-                      textAlign: TextAlign.left,
-                    ),
                     TextFormField(
                       decoration: InputDecoration(
                         labelText: 'Email',
@@ -130,7 +120,7 @@ class _ForgotPassPageState extends State<ForgotPassPage> {
                           MaterialPageRoute(
                             builder: (context) =>
                                 const OtpVerificationResetPage(
-                              phoneNumber: 'asade@kontol.com',
+                              emailAddress: 'test@test.com',
                             ),
                           ),
                         );
