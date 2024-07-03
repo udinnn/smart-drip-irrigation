@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Smart Drip Irrigation',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF447055)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3B614A)),
         useMaterial3: true,
       ),
       home: const StartupPage(),
@@ -67,7 +67,7 @@ class StartupPage extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: const Color(0xFF447055),
+      backgroundColor: const Color(0xFF3B614A),
       nextScreen: const StartMenu(),
       duration: 3000,
       splashTransition: SplashTransition.fadeTransition,

@@ -94,7 +94,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'Email',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -103,14 +103,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -121,7 +121,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'Username',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -130,14 +130,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -148,7 +148,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'Nama',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -157,14 +157,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -175,7 +175,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'Alamat',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -184,14 +184,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -203,7 +203,7 @@ class _SignupPageState extends State<SignupPage> {
                           labelText:
                               'Deskripsi (Nama tumbuhan/ keterangan lainnya)',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -212,14 +212,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -230,7 +230,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'No. Handphone',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -239,14 +239,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -258,7 +258,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'Password',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -267,14 +267,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -283,7 +283,7 @@ class _SignupPageState extends State<SignupPage> {
                               obscureText
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: const Color(0xFF447055),
+                              color: const Color(0xFF3B614A),
                             ),
                             onPressed: () {
                               setState(() {
@@ -299,7 +299,7 @@ class _SignupPageState extends State<SignupPage> {
                         decoration: InputDecoration(
                           labelText: 'Konfirmasi Password',
                           labelStyle: const TextStyle(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w300,
                           ),
@@ -308,14 +308,14 @@ class _SignupPageState extends State<SignupPage> {
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: const BorderSide(
-                              color: Color(0xFF447055),
+                              color: Color(0xFF3B614A),
                               width: 2.0,
                             ),
                           ),
@@ -324,7 +324,7 @@ class _SignupPageState extends State<SignupPage> {
                               obscureText2
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: const Color(0xFF447055),
+                              color: const Color(0xFF3B614A),
                             ),
                             onPressed: () {
                               setState(() {
@@ -335,9 +335,9 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      ElevatedButton(
-                        onPressed: () {
-                          // Handle register logic here
+                      GestureDetector(
+                        onTap: () {
+                          // Handle login logic here
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -347,25 +347,31 @@ class _SignupPageState extends State<SignupPage> {
                             ),
                           );
                         },
-                        style: ElevatedButton.styleFrom(
-                          foregroundColor: const Color(0xffE7E8E3),
-                          backgroundColor: const Color(0xFF447055),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+                        child: Container(
+                          height: 50,
+                          width: 900,
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(10.0), // Add this line
+                            gradient: const LinearGradient(
+                              colors: [Color(0xFF3B614A), Color(0xFF123456)],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                            ),
                           ),
-                          minimumSize: const Size(350, 50),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 32, vertical: 12),
+                          child: const Center(
+                            child: Text(
+                              'Login',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xffE7E8E3),
+                              ),
+                            ),
+                          ),
                         ),
-                        child: const Text(
-                          'Daftar',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xffE7E8E3)),
-                        ),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -399,7 +405,7 @@ class _SignupPageState extends State<SignupPage> {
                         fontSize: 12,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w300,
-                        color: Color(0xFF447055),
+                        color: Color(0xFF3B614A),
                         decoration: TextDecoration.underline,
                       ),
                     ),

@@ -36,7 +36,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                 fontSize: 24,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF447055),
+                color: Color(0xFF3B614A),
               ),
             ),
             const SizedBox(height: 14),
@@ -46,7 +46,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                 style: const TextStyle(
                   fontSize: 12,
                   fontFamily: 'Inter',
-                  color: Color(0xFF447055),
+                  color: Color(0xFF3B614A),
                 ),
                 children: [
                   TextSpan(
@@ -54,7 +54,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                     style: const TextStyle(
                       fontSize: 12,
                       fontFamily: 'Inter',
-                      color: Color(0xFF447055),
+                      color: Color(0xFF3B614A),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -63,7 +63,7 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                     style: TextStyle(
                       fontSize: 12,
                       fontFamily: 'Inter',
-                      color: Color(0xFF447055),
+                      color: Color(0xFF3B614A),
                     ),
                   ),
                 ],
@@ -89,13 +89,13 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                         counterText: '',
                         border: UnderlineInputBorder(
                           borderSide: BorderSide(
-                            color: Color(0xFF447055),
+                            color: Color(0xFF3B614A),
                             width: 2.0,
                           ),
                           borderRadius: BorderRadius.all(Radius.zero),
                         ),
                         labelStyle: TextStyle(
-                          color: Color(0xFF447055),
+                          color: Color(0xFF3B614A),
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w300,
                         ),
@@ -125,17 +125,17 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                     fontSize: 12,
                     fontFamily: 'Inter',
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF447055),
+                    color: Color(0xFF3B614A),
                     decoration: TextDecoration.underline),
               ),
             ),
             const SizedBox(height: 24),
-            ElevatedButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 // Validate the OTP here
-                final enteredOtp =
-                    otpControllers.map((controller) => controller.text).join();
-                print('Entered OTP: $enteredOtp');
+                // final enteredOtp =
+                //     otpControllers.map((controller) => controller.text).join();
+                // print('Entered OTP: $enteredOtp');
                 // Implement your logic for verifying the OTP
                 Navigator.push(
                   context,
@@ -144,23 +144,27 @@ class _OtpVerificationPageState extends State<OtpVerificationPage> {
                   ),
                 );
               },
-              style: ElevatedButton.styleFrom(
-                foregroundColor: const Color(0xffE7E8E3),
-                backgroundColor: const Color(0xFF447055),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
+              child: Container(
+                height: 50,
+                width: 900,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0), // Add this line
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFF3B614A), Color(0xFF123456)],
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                  ),
                 ),
-                minimumSize: const Size(350, 50),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-              ),
-              child: const Text(
-                'Verifikasi',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xffE7E8E3),
+                child: const Center(
+                  child: Text(
+                    'Verfikasi',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xffE7E8E3),
+                    ),
+                  ),
                 ),
               ),
             ),
