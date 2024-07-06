@@ -397,190 +397,127 @@ class _QuickInfoPageState extends State<QuickInfoPage> {
         Positioned(
           top: 450,
           left: 20,
-          child: Container(
+          child: SizedBox(
             width: 350,
             height: 175,
-            color: Colors.transparent,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  Container(
-                    width: 350,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xFFFFFCF2),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Color(0xFF3B614A),
-                            child: Icon(
-                              CupertinoIcons.tree,
-                              color: Color(0xFFFFFCF2),
+            child: Column(
+              children: [
+                Container(
+                  width: 350,
+                  height: 75,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: const Color(0xFFFFFCF2),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundColor: Color(0xFF3B614A),
+                          child: Icon(
+                            CupertinoIcons.tree,
+                            color: Color(0xFFFFFCF2),
+                          ),
+                        ),
+                        SizedBox(width: 15),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 7.5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Senin, 15 Juli 2024',
+                                  style: TextStyle(
+                                    color: Color(0xFF3B614A),
+                                    fontFamily: 'Poppins',
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Text(
+                                  '24°C | 68% | 92ml',
+                                  style: TextStyle(
+                                    color: Color(0xFF3B614A),
+                                    fontFamily: 'Inter',
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(width: 15),
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsets.only(top: 7.5),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Senin',
-                                    style: TextStyle(
-                                      color: Color(0xFF3B614A),
-                                      fontFamily: 'Poppins',
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Text(
-                                    '24°C | 68% | 92ml',
-                                    style: TextStyle(
-                                      color: Color(0xFF3B614A),
-                                      fontFamily: 'Inter',
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(right: 10),
-                            child: Icon(Icons.more_vert),
-                          ),
-                        ],
-                      ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(right: 10),
+                          child: Icon(Icons.more_vert),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 25,
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  width: 350,
+                  height: 75,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: const Color(0xFFFFFCF2),
                   ),
-                  Container(
-                    width: 350,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xFFFFFCF2),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Color(0xFF3B614A),
-                            child: Icon(
-                              CupertinoIcons.tree,
-                              color: Color(0xFFFFFCF2),
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundColor: Color(0xFF3B614A),
+                          child: Icon(
+                            CupertinoIcons.tree,
+                            color: Color(0xFFFFFCF2),
+                          ),
+                        ),
+                        SizedBox(width: 15),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 7.5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Selasa, 16 Juli 2024',
+                                  style: TextStyle(
+                                    color: Color(0xFF3B614A),
+                                    fontFamily: 'Poppins',
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Text(
+                                  '22°C | 76% | 79ml',
+                                  style: TextStyle(
+                                    color: Color(0xFF3B614A),
+                                    fontFamily: 'Inter',
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(width: 15),
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsets.only(top: 7.5),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Selasa',
-                                    style: TextStyle(
-                                      color: Color(0xFF3B614A),
-                                      fontFamily: 'Poppins',
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Text(
-                                    '22°C | 76% | 79ml',
-                                    style: TextStyle(
-                                      color: Color(0xFF3B614A),
-                                      fontFamily: 'Inter',
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(right: 10),
-                            child: Icon(Icons.more_vert),
-                          ),
-                        ],
-                      ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(right: 10),
+                          child: Icon(Icons.more_vert),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Container(
-                    width: 350,
-                    height: 75,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: const Color(0xFFFFFCF2),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Color(0xFF3B614A),
-                            child: Icon(
-                              CupertinoIcons.tree,
-                              color: Color(0xFFFFFCF2),
-                            ),
-                          ),
-                          SizedBox(width: 15),
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsets.only(top: 7.5),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Rabu',
-                                    style: TextStyle(
-                                      color: Color(0xFF3B614A),
-                                      fontFamily: 'Poppins',
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Text(
-                                    '21°C | 82% | 67ml',
-                                    style: TextStyle(
-                                      color: Color(0xFF3B614A),
-                                      fontFamily: 'Inter',
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(right: 10),
-                            child: Icon(Icons.more_vert),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
