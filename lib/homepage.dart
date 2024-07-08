@@ -1,5 +1,6 @@
 // lib/main.dart
 import 'package:demeter_cd_sdi/prediction_page.dart';
+import 'package:demeter_cd_sdi/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:demeter_cd_sdi/quickinfo_page.dart';
@@ -63,13 +64,7 @@ class _HomepageState extends State<Homepage> {
             QuickInfoPage(),
             MonitoringPage(),
             PredictionPage(),
-            Stack(
-              children: [
-                Center(
-                  child: Text('Ini menu profile'),
-                ),
-              ],
-            ),
+            ProfilePage(),
           ],
         ),
         bottomNavigationBar: WaterDropNavBar(
