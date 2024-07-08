@@ -1,19 +1,74 @@
-# Smart Drip Irrigation
+# Smart Drip Irrigation: Aplikasi Mobile untuk Monitoring dan Kontrol Irigasi
 
-Capstone Project Mobile Application untuk melakukan monitoring dan kontrol terhadap sistem irigasi di Greenhouse Telkom University
+[![Smart Drip Irrigation](assets/images/logo.png)](https://github.com/tabnine/smart-drip-irrigation)
 
-# TODO List
+Aplikasi Mobile untuk Project Capstone yang di desain dalam upaya monitoring dan kontrol irigasi di Greenhouse Telkom University.
 
-List fitur awal:
-- Splash screen (done)
-- Menu awal (done)
-- Login -> OTP -> Homepage (frontend done)
-- Signup biasa (email/hp) -> OTP -> Login (frontend done)
-- Forgot Pass -> OTP -> Login (frontend done)
-- Login via google -> Homepage
-- Login via FB (opsional) -> Homepage
+## Table of Contents
 
-Homepage:
-- Welcome, suhu, kelembaban cuaca saat ini
-- Monitoring tumbuhan
+- [Introduction](#introduction)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [TODO List](#todo)
+
+
+## Introduction
+
+Smart Drip Irrigation adalah aplikasi mobile dengan tujuan untuk melakukan monitoring secara real-time dan juga melakukan kontrol irigasi di greenhouse. Aplikasi ini dirancang supaya mudah digunakan dan efisien, sehingga pengguna dapat memonitor tanaman, prediksi penggunaan air, dan optimisasi proses irigasi.
+
+## Features
+
+- Splash screen
+- Menu awal
+- Login 
+- Signup (email/phone)
+- Forgot Password
+- Google Login
+- Quick Info
+- Monitoring real-time untuk irigasi tanaman
 - Prediksi penggunaan irigasi
+- Profile 
+
+## Screenshots
+
+| Splash Screen | Menu Awal | Login |
+|---------------|------------|-------|
+| ![](assets/images/Screenshot/splash_screen.png) | ![](assets/images/Screenshot/menu_awal.png) | ![](assets/images/Screenshot/login.png) |
+
+| Signup | Forgot Password | Quick Info |
+|--------|-----------------|----------|
+| ![](assets/images/Screenshot/daftar.png) | ![](assets/images/Screenshot/lupa_pw.png) | ![](assets/images/Screenshot/quickinfo.png) |
+
+| OTP | OTP Forgot Password | Monitoring |
+|--------|-----------------|----------|
+| ![](assets/images/Screenshot/otp.png) | ![](assets/images/Screenshot/otp_lupa_pw.png) | ![](assets/images/Screenshot/monitoring.png) |
+
+| Prediksi | Profile |
+|--------|-----------------|
+| ![](assets/images/Screenshot/prediksi.png) | ![](assets/images/Screenshot/profile.png) |
+
+## Tech Stack
+
+- Flutter (Frontend/Backend)
+- Firebase (Authentication, Realtime Database)
+- HTTPS (Hypertext Transfer Protocol Secure)
+
+## Getting Started
+
+Untuk memulai pengembangan proyek ini, lakukan hal dibawah:
+
+1. Duplikat repository ini: `git clone https://github.com/tabnine/smart-drip-irrigation.git`
+2. Install dependencies: `flutter pub get`
+3. Konfigurasi pengaturan Firebase
+4. Jalankan apliaksi: `flutter run DEVICENAME`
+
+## TODO
+
+- Control Page
+- FAQ Page
+- About App Page
+- My Profile Page
+- History Page
+- All of the backends
