@@ -361,7 +361,7 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           child: const Center(
                             child: Text(
-                              'Login',
+                              'Daftar',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',
