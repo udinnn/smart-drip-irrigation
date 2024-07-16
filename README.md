@@ -66,7 +66,6 @@ Untuk memulai pengembangan proyek ini, lakukan hal dibawah:
 
 ## TODO
 
-- Control Page
 - FAQ Page
 - About App Page
 - My Profile Page

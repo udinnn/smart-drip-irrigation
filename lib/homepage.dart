@@ -29,8 +29,6 @@ class _HomepageState extends State<Homepage> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
         systemNavigationBarColor: navigationBarColor,
-        systemNavigationBarIconBrightness: Brightness.dark,
-        systemNavigationBarDividerColor: const Color(0xFF3B614A),
       ),
       child: Scaffold(
         backgroundColor: const Color(0xffE7E8E3),
@@ -70,7 +68,7 @@ class _HomepageState extends State<Homepage> {
         bottomNavigationBar: WaterDropNavBar(
           backgroundColor: navigationBarColor,
           waterDropColor: const Color(0xffE7E8E3),
-          bottomPadding: 10,
+          bottomPadding: 8,
           onItemSelected: (int index) {
             setState(() {
               selectedIndex = index;

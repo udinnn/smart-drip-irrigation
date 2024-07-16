@@ -1,3 +1,4 @@
+import 'package:demeter_cd_sdi/control_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 
@@ -18,403 +19,22 @@ class MonitoringPage extends StatelessWidget {
 
     return Stack(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 20.0),
-          child: Text(
-            'Real-time monitoring',
-            style: TextStyle(
-                color: Color(0xFF3B614A),
-                fontSize: 20,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w700),
-          ),
-        ),
+        const _PageTitle(),
         Padding(
           padding: const EdgeInsets.only(left: 20.0, top: 40),
           child: SizedBox(
             width: 350,
             height: 580,
             child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 200,
-                    width: 350,
-                    child: CustomCard(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            "Suhu ruangan",
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: 'Poppins',
-                              color: Color(0xFF3B614A),
-                            ),
-                          ),
-                          const SizedBox(height: 20),
-                          AspectRatio(
-                            aspectRatio: 16 / 6,
-                            child: LineChart(
-                              LineChartData(
-                                lineTouchData: const LineTouchData(
-                                  handleBuiltInTouches: true,
-                                ),
-                                gridData: const FlGridData(show: false),
-                                titlesData: FlTitlesData(
-                                  rightTitles: const AxisTitles(
-                                    sideTitles: SideTitles(showTitles: false),
-                                  ),
-                                  topTitles: const AxisTitles(
-                                    sideTitles: SideTitles(showTitles: false),
-                                  ),
-                                  bottomTitles: AxisTitles(
-                                    sideTitles: SideTitles(
-                                      showTitles: true,
-                                      getTitlesWidget:
-                                          (double value, TitleMeta meta) {
-                                        return data.bottomTitleSuhu[
-                                                    value.toInt()] !=
-                                                null
-                                            ? SideTitleWidget(
-                                                axisSide: meta.axisSide,
-                                                child: Text(
-                                                  data.bottomTitleSuhu[
-                                                          value.toInt()]
-                                                      .toString(),
-                                                  style: const TextStyle(
-                                                    fontSize: 10,
-                                                    color: Color(0xFF3B614A),
-                                                  ),
-                                                ),
-                                              )
-                                            : const SizedBox();
-                                      },
-                                    ),
-                                  ),
-                                  leftTitles: AxisTitles(
-                                    sideTitles: SideTitles(
-                                      getTitlesWidget:
-                                          (double value, TitleMeta meta) {
-                                        return data.leftTitleSuhu[
-                                                    value.toInt()] !=
-                                                null
-                                            ? Text(
-                                                data.leftTitleSuhu[
-                                                        value.toInt()]
-                                                    .toString(),
-                                                style: const TextStyle(
-                                                  fontSize: 10,
-                                                  color: Color(0xFF3B614A),
-                                                ),
-                                              )
-                                            : const SizedBox();
-                                      },
-                                      showTitles: true,
-                                      interval: 1,
-                                      reservedSize: 40,
-                                    ),
-                                  ),
-                                ),
-                                borderData: FlBorderData(show: false),
-                                lineBarsData: [
-                                  LineChartBarData(
-                                    color: selectionColor,
-                                    barWidth: 2.5,
-                                    belowBarData: BarAreaData(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topCenter,
-                                        end: Alignment.bottomCenter,
-                                        colors: [
-                                          selectionColor.withOpacity(0.5),
-                                          Colors.transparent
-                                        ],
-                                      ),
-                                      show: true,
-                                    ),
-                                    dotData: const FlDotData(show: false),
-                                    spots: data.spots,
-                                  )
-                                ],
-                                minX: 0,
-                                maxX: 120,
-                                maxY: 105,
-                                minY: -5,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  // Chart Kelembaban
-
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: SizedBox(
-                      height: 200,
-                      width: 350,
-                      child: CustomCard(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              "Kelembaban tanah",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                fontFamily: 'Poppins',
-                                color: Color(0xFF3B614A),
-                              ),
-                            ),
-                            const SizedBox(height: 20),
-                            AspectRatio(
-                              aspectRatio: 16 / 6,
-                              child: LineChart(
-                                LineChartData(
-                                  lineTouchData: const LineTouchData(
-                                    handleBuiltInTouches: true,
-                                  ),
-                                  gridData: const FlGridData(show: false),
-                                  titlesData: FlTitlesData(
-                                    rightTitles: const AxisTitles(
-                                      sideTitles: SideTitles(showTitles: false),
-                                    ),
-                                    topTitles: const AxisTitles(
-                                      sideTitles: SideTitles(showTitles: false),
-                                    ),
-                                    bottomTitles: AxisTitles(
-                                      sideTitles: SideTitles(
-                                        showTitles: true,
-                                        getTitlesWidget:
-                                            (double value, TitleMeta meta) {
-                                          return data.bottomTitleKelembaban[
-                                                      value.toInt()] !=
-                                                  null
-                                              ? SideTitleWidget(
-                                                  axisSide: meta.axisSide,
-                                                  child: Text(
-                                                    data.bottomTitleKelembaban[
-                                                            value.toInt()]
-                                                        .toString(),
-                                                    style: const TextStyle(
-                                                      fontSize: 10,
-                                                      color: Color(0xFF3B614A),
-                                                    ),
-                                                  ),
-                                                )
-                                              : const SizedBox();
-                                        },
-                                      ),
-                                    ),
-                                    leftTitles: AxisTitles(
-                                      sideTitles: SideTitles(
-                                        getTitlesWidget:
-                                            (double value, TitleMeta meta) {
-                                          return data.leftTitleKelembaban[
-                                                      value.toInt()] !=
-                                                  null
-                                              ? Text(
-                                                  data.leftTitleKelembaban[
-                                                          value.toInt()]
-                                                      .toString(),
-                                                  style: const TextStyle(
-                                                    fontSize: 10,
-                                                    color: Color(0xFF3B614A),
-                                                  ),
-                                                )
-                                              : const SizedBox();
-                                        },
-                                        showTitles: true,
-                                        interval: 1,
-                                        reservedSize: 40,
-                                      ),
-                                    ),
-                                  ),
-                                  borderData: FlBorderData(show: false),
-                                  lineBarsData: [
-                                    LineChartBarData(
-                                      color: selectionColor,
-                                      barWidth: 2.5,
-                                      belowBarData: BarAreaData(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            selectionColor.withOpacity(0.5),
-                                            Colors.transparent
-                                          ],
-                                        ),
-                                        show: true,
-                                      ),
-                                      dotData: const FlDotData(show: false),
-                                      spots: data.spots,
-                                    )
-                                  ],
-                                  minX: 0,
-                                  maxX: 120,
-                                  maxY: 105,
-                                  minY: -5,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  // Chart debit air
-
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: SizedBox(
-                      height: 200,
-                      width: 350,
-                      child: CustomCard(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              "Debit air",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                fontFamily: 'Poppins',
-                                color: Color(0xFF3B614A),
-                              ),
-                            ),
-                            const SizedBox(height: 20),
-                            AspectRatio(
-                              aspectRatio: 16 / 6,
-                              child: LineChart(
-                                LineChartData(
-                                  lineTouchData: const LineTouchData(
-                                    handleBuiltInTouches: true,
-                                  ),
-                                  gridData: const FlGridData(show: false),
-                                  titlesData: FlTitlesData(
-                                    rightTitles: const AxisTitles(
-                                      sideTitles: SideTitles(showTitles: false),
-                                    ),
-                                    topTitles: const AxisTitles(
-                                      sideTitles: SideTitles(showTitles: false),
-                                    ),
-                                    bottomTitles: AxisTitles(
-                                      sideTitles: SideTitles(
-                                        showTitles: true,
-                                        getTitlesWidget:
-                                            (double value, TitleMeta meta) {
-                                          return data.bottomTitleAir[
-                                                      value.toInt()] !=
-                                                  null
-                                              ? SideTitleWidget(
-                                                  axisSide: meta.axisSide,
-                                                  child: Text(
-                                                    data.bottomTitleAir[
-                                                            value.toInt()]
-                                                        .toString(),
-                                                    style: const TextStyle(
-                                                      fontSize: 10,
-                                                      color: Color(0xFF3B614A),
-                                                    ),
-                                                  ),
-                                                )
-                                              : const SizedBox();
-                                        },
-                                      ),
-                                    ),
-                                    leftTitles: AxisTitles(
-                                      sideTitles: SideTitles(
-                                        getTitlesWidget:
-                                            (double value, TitleMeta meta) {
-                                          return data.leftTitleAir[
-                                                      value.toInt()] !=
-                                                  null
-                                              ? Text(
-                                                  data.leftTitleAir[
-                                                          value.toInt()]
-                                                      .toString(),
-                                                  style: const TextStyle(
-                                                    fontSize: 10,
-                                                    color: Color(0xFF3B614A),
-                                                  ),
-                                                )
-                                              : const SizedBox();
-                                        },
-                                        showTitles: true,
-                                        interval: 1,
-                                        reservedSize: 40,
-                                      ),
-                                    ),
-                                  ),
-                                  borderData: FlBorderData(show: false),
-                                  lineBarsData: [
-                                    LineChartBarData(
-                                      color: selectionColor,
-                                      barWidth: 2.5,
-                                      belowBarData: BarAreaData(
-                                        gradient: LinearGradient(
-                                          begin: Alignment.topCenter,
-                                          end: Alignment.bottomCenter,
-                                          colors: [
-                                            selectionColor.withOpacity(0.5),
-                                            Colors.transparent
-                                          ],
-                                        ),
-                                        show: true,
-                                      ),
-                                      dotData: const FlDotData(show: false),
-                                      spots: data.spots,
-                                    )
-                                  ],
-                                  minX: 0,
-                                  maxX: 120,
-                                  maxY: 105,
-                                  minY: -5,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        // Handle control logic here
-                      },
-                      child: Container(
-                        height: 50,
-                        width: 900,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(10.0), // Add this line
-                          gradient: const LinearGradient(
-                            colors: [Color(0xFF3B614A), Color(0xFF123456)],
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                          ),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Kontrol Debit Air',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xffE7E8E3),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  _buildChart(
+                      "Suhu ruangan", data.bottomTitleSuhu, data.leftTitleSuhu),
+                  _buildChart("Kelembaban tanah", data.bottomTitleKelembaban,
+                      data.leftTitleKelembaban),
+                  _buildChart(
+                      "Debit air", data.bottomTitleAir, data.leftTitleAir),
+                  _buildControlButton(context),
                 ],
               ),
             ),
@@ -423,26 +43,160 @@ class MonitoringPage extends StatelessWidget {
       ],
     );
   }
-}
 
-class Titles {
-  static getTitleData() => const FlTitlesData(
+  Widget _buildChart(String title, Map<int, String> bottomTitles,
+      Map<int, String> leftTitles) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
+      child: SizedBox(
+        height: 200,
+        width: 350,
+        child: CustomCard(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: 'Poppins',
+                  color: primaryColor,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Expanded(
+                child: LineChart(
+                  _getChartData(bottomTitles, leftTitles),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  LineChartData _getChartData(
+      Map<int, String> bottomTitles, Map<int, String> leftTitles) {
+    return LineChartData(
+      lineTouchData: const LineTouchData(handleBuiltInTouches: true),
+      gridData: const FlGridData(show: false),
+      titlesData: _getTitlesData(bottomTitles, leftTitles),
+      borderData: FlBorderData(show: false),
+      lineBarsData: [_getLineChartBarData()],
+      minX: 0,
+      maxX: 120,
+      maxY: 105,
+      minY: -5,
+    );
+  }
+
+  FlTitlesData _getTitlesData(
+      Map<int, String> bottomTitles, Map<int, String> leftTitles) {
+    return FlTitlesData(
+      rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+      topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
+      bottomTitles: AxisTitles(
+        sideTitles: SideTitles(
+          showTitles: true,
+          getTitlesWidget: (value, meta) =>
+              _buildTitleWidget(bottomTitles, value),
+        ),
+      ),
+      leftTitles: AxisTitles(
+        sideTitles: SideTitles(
+          showTitles: true,
+          getTitlesWidget: (value, meta) =>
+              _buildTitleWidget(leftTitles, value),
+          interval: 1,
+          reservedSize: 40,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTitleWidget(Map<int, String> titles, double value) {
+    return titles[value.toInt()] != null
+        ? Text(
+            titles[value.toInt()]!,
+            style: const TextStyle(fontSize: 10, color: primaryColor),
+          )
+        : const SizedBox();
+  }
+
+  LineChartBarData _getLineChartBarData() {
+    return LineChartBarData(
+      color: selectionColor,
+      barWidth: 2.5,
+      belowBarData: BarAreaData(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [selectionColor.withOpacity(0.5), Colors.transparent],
+        ),
         show: true,
-        bottomTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: true,
-            reservedSize: 35,
+      ),
+      dotData: const FlDotData(show: false),
+      spots: LineData().spots,
+    );
+  }
+
+  Widget _buildControlButton(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20.0),
+      child: GestureDetector(
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const ControlPage()),
+        ),
+        child: Container(
+          height: 50,
+          width: 900,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            gradient: const LinearGradient(
+              colors: [primaryColor, Color(0xFF123456)],
+              begin: Alignment.bottomCenter,
+              end: Alignment.topCenter,
+            ),
+          ),
+          child: const Center(
+            child: Text(
+              'Kontrol Debit Air',
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w600,
+                color: backgroundColor,
+              ),
+            ),
           ),
         ),
-        leftTitles: AxisTitles(
-          sideTitles: SideTitles(
-            showTitles: true,
-          ),
-        ),
-      );
+      ),
+    );
+  }
 }
 
-// CUSTOM CARD
+class _PageTitle extends StatelessWidget {
+  const _PageTitle();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.only(left: 20.0),
+      child: Text(
+        'Real-time monitoring',
+        style: TextStyle(
+          color: primaryColor,
+          fontSize: 20,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    );
+  }
+}
 
 class CustomCard extends StatelessWidget {
   final Widget child;
@@ -450,19 +204,19 @@ class CustomCard extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   const CustomCard({super.key, this.color, this.padding, required this.child});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(
-            Radius.circular(10.0),
-          ),
-          color: color ?? cardBackgroundColor,
-        ),
-        child: Padding(
-          padding: padding ?? const EdgeInsets.all(20.0),
-          child: child,
-        ));
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        color: color ?? cardBackgroundColor,
+      ),
+      child: Padding(
+        padding: padding ?? const EdgeInsets.all(20.0),
+        child: child,
+      ),
+    );
   }
 }
 
