@@ -50,6 +50,12 @@ class _HomepageState extends State<Homepage> {
                 color: const Color(0xFF3B614A),
                 onPressed: () {
                   // Handle profile icon tap
+                  setState(() {
+                    selectedIndex = 3;
+                  });
+                  pageController.animateToPage(selectedIndex,
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeOutQuad);
                 },
               ),
             ),

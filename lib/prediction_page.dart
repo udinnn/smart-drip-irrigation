@@ -211,10 +211,6 @@ class _PredictionCard extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(right: 10),
-              child: Icon(Icons.more_vert),
-            ),
           ],
         ),
       ),

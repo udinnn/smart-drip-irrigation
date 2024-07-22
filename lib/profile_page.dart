@@ -1,3 +1,7 @@
+import 'package:demeter_cd_sdi/aboutapp_page.dart';
+import 'package:demeter_cd_sdi/faq_page.dart';
+import 'package:demeter_cd_sdi/history_page.dart';
+import 'package:demeter_cd_sdi/myprofile_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -13,12 +17,57 @@ class ProfilePage extends StatelessWidget {
           children: [
             _buildProfileHeader(),
             const SizedBox(height: 32),
-            _buildMenuItem(Icons.person_2_outlined, 'Profil Saya'),
-            _buildMenuItem(Icons.history_outlined, 'Riwayat Kontrol'),
-            _buildMenuItem(Icons.question_answer_outlined, 'FAQ'),
-            _buildMenuItem(Icons.info_outline, 'Tentang Aplikasi'),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MyProfilePage(),
+                  ),
+                );
+              },
+              child: _buildMenuItem(Icons.person_2_outlined, 'Profil Saya'),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ControlHistoryPage(),
+                  ),
+                );
+              },
+              child: _buildMenuItem(Icons.history_outlined, 'Riwayat Kontrol'),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FAQPage(),
+                  ),
+                );
+              },
+              child: _buildMenuItem(Icons.question_answer_outlined, 'FAQ'),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutPage(),
+                  ),
+                );
+              },
+              child: _buildMenuItem(Icons.info_outline, 'Tentang Aplikasi'),
+            ),
             const SizedBox(height: 200),
-            _buildMenuItem(Icons.logout_outlined, 'Keluar'),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).popUntil((route) => route.isFirst);
+              },
+              child: _buildMenuItem(Icons.logout_outlined, 'Keluar'),
+            ),
           ],
         ),
       ),

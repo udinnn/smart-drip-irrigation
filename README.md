@@ -45,9 +45,17 @@ Smart Drip Irrigation adalah aplikasi mobile dengan tujuan untuk melakukan monit
 |--------|-----------------|----------|
 | ![](assets/images/Screenshot/otp.png) | ![](assets/images/Screenshot/otp_lupa_pw.png) | ![](assets/images/Screenshot/monitoring.png) |
 
-| Prediksi | Profile |
-|--------|-----------------|
-| ![](assets/images/Screenshot/prediksi.png) | ![](assets/images/Screenshot/profile.png) |
+| Prediksi | Profile | Kontrol |
+|--------|-----------------|----------|
+| ![](assets/images/Screenshot/prediksi.png) | ![](assets/images/Screenshot/profile.png) | ![](assets/images/Screenshot/control.png) |
+
+| My Profile | Riwayat Kontrol | FAQ |
+|--------|-----------------|----------|
+| ![](assets/images/Screenshot/myprofile.png) | ![](assets/images/Screenshot/history.png) | ![](assets/images/Screenshot/faq.png) |
+
+| About App |
+|--------|
+| ![](assets/images/Screenshot/about_app.png) |
 
 ## Tech Stack
 
@@ -66,8 +74,4 @@ Untuk memulai pengembangan proyek ini, lakukan hal dibawah:
 
 ## TODO
 
-- FAQ Page
-- About App Page
-- My Profile Page
-- History Page
 - All of the backends
