@@ -48,11 +48,10 @@ class _DataMonitoringCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 70,
-      left: 20,
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 70),
       child: Container(
-        width: 350,
+        width: 5000,
         height: 320,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -261,9 +260,8 @@ class _PredictionSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
-      top: 410,
-      left: 20,
+    return const Padding(
+      padding: EdgeInsets.only(top: 410, left: 20.0, right: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -297,7 +295,7 @@ class _PredictionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: 5000,
       height: 75,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),

@@ -21,10 +21,11 @@ class MonitoringPage extends StatelessWidget {
       children: [
         const _PageTitle(),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0, top: 40),
+          padding: const EdgeInsets.only(
+              left: 20.0, top: 40, right: 20.0, bottom: 20.0),
           child: SizedBox(
-            width: 350,
-            height: 580,
+            width: 5000,
+            height: 6000,
             child: SingleChildScrollView(
               child: Column(
                 children: [

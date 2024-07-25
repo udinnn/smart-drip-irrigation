@@ -41,11 +41,10 @@ class _NextDayPrediction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      left: 20,
-      top: 40,
+    return Padding(
+      padding: const EdgeInsets.only(left: 20.0, top: 40.0, right: 20.0),
       child: Container(
-        width: 350,
+        width: 5000,
         height: 300,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -125,9 +124,8 @@ class _FuturePredictions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
-      left: 20,
-      top: 370,
+    return const Padding(
+      padding: EdgeInsets.only(left: 20.0, top: 370.0, right: 20.0),
       child: SizedBox(
         width: 350,
         height: 260,

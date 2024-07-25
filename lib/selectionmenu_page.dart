@@ -58,7 +58,8 @@ class _StartMenuState extends State<StartMenu> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 50.0),
+                padding: const EdgeInsets.only(
+                    bottom: 50.0, left: 25.0, right: 25.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -78,7 +79,7 @@ class _StartMenuState extends State<StartMenu> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        minimumSize: const Size(350, 50),
+                        minimumSize: const Size(5000, 50),
                       ),
                       child: const Text(
                         'Masuk',
@@ -107,7 +108,7 @@ class _StartMenuState extends State<StartMenu> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        minimumSize: const Size(350, 50),
+                        minimumSize: const Size(5000, 50),
                       ),
                       child: const Text(
                         'Daftar',
@@ -132,7 +133,7 @@ class _StartMenuState extends State<StartMenu> {
                           );
                         },
                         child: const Padding(
-                          padding: EdgeInsets.only(top: 10.0, right: 25.0),
+                          padding: EdgeInsets.only(top: 10.0),
                           child: Text(
                             'Lupa Password?',
                             style: TextStyle(
