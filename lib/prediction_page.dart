@@ -125,10 +125,11 @@ class _FuturePredictions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(left: 20.0, top: 370.0, right: 20.0),
+      padding:
+          EdgeInsets.only(left: 20.0, top: 370.0, right: 20.0, bottom: 20.0),
       child: SizedBox(
-        width: 350,
-        height: 260,
+        width: 3500,
+        height: 3000,
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(

@@ -12,7 +12,7 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFE7E8E3),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+        padding: const EdgeInsets.only(left: 20.0, top: 20.0, bottom: 20.0),
         child: Column(
           children: [
             _buildProfileHeader(),
@@ -28,6 +28,7 @@ class ProfilePage extends StatelessWidget {
               },
               child: _buildMenuItem(Icons.person_2_outlined, 'Profil Saya'),
             ),
+            const SizedBox(height: 16),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -39,6 +40,7 @@ class ProfilePage extends StatelessWidget {
               },
               child: _buildMenuItem(Icons.history_outlined, 'Riwayat Kontrol'),
             ),
+            const SizedBox(height: 16),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -50,6 +52,7 @@ class ProfilePage extends StatelessWidget {
               },
               child: _buildMenuItem(Icons.question_answer_outlined, 'FAQ'),
             ),
+            const SizedBox(height: 16),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -61,7 +64,8 @@ class ProfilePage extends StatelessWidget {
               },
               child: _buildMenuItem(Icons.info_outline, 'Tentang Aplikasi'),
             ),
-            const SizedBox(height: 200),
+            const SizedBox(height: 16),
+            Expanded(child: Container()),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).popUntil((route) => route.isFirst);
@@ -133,7 +137,6 @@ class ProfilePage extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 16),
         ],
       ),
     );
