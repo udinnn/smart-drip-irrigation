@@ -128,8 +128,8 @@ class _FuturePredictions extends StatelessWidget {
       padding:
           EdgeInsets.only(left: 20.0, top: 370.0, right: 20.0, bottom: 20.0),
       child: SizedBox(
-        width: 3500,
-        height: 3000,
+        width: 5000,
+        height: 5000,
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
@@ -165,7 +165,7 @@ class _PredictionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
+      width: 5000,
       height: 75,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),

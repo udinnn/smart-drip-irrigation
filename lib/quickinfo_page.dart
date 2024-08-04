@@ -97,9 +97,9 @@ class _FilterDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25.0, top: 20),
+      padding: const EdgeInsets.only(left: 25.0, top: 20, right: 25.0),
       child: Container(
-        width: 300,
+        width: 5000,
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -130,7 +130,7 @@ class _DropdownContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: 20.0),
+          padding: EdgeInsets.only(left: 20.0, right: 20.0),
           child: Row(
             children: [
               Icon(Icons.location_on_outlined, color: Color(0xFF3B614A)),
@@ -164,7 +164,7 @@ class _DataCards extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(left: 25.0, right: 25.0),
       child: SizedBox(
-        width: 300,
+        width: 5000,
         height: 175,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -337,7 +337,6 @@ class _PredictionCard extends StatelessWidget {
                 ],
               ),
             ),
-            const Icon(Icons.more_vert),
           ],
         ),
       ),

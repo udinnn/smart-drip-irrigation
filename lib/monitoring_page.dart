@@ -51,7 +51,7 @@ class MonitoringPage extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 20),
       child: SizedBox(
         height: 200,
-        width: 350,
+        width: 5000,
         child: CustomCard(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
