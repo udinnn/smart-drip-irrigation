@@ -67,7 +67,7 @@ Smart Drip Irrigation adalah aplikasi mobile dengan tujuan untuk melakukan monit
 
 Untuk memulai pengembangan proyek ini, lakukan hal dibawah:
 
-1. Duplikat repository ini: `git clone https://github.com/tabnine/smart-drip-irrigation.git`
+1. Duplikat repository ini: `git clone https://github.com/udinnn/smart-drip-irrigation.git`
 2. Install dependencies: `flutter pub get`
 3. Konfigurasi pengaturan Firebase
 4. Jalankan apliaksi: `flutter run DEVICENAME`
